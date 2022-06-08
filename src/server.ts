@@ -1,18 +1,20 @@
-// Reference:https://ics.media/entry/4682/
+// "http"という名前のライブラリを使えるようにしている
+import * as http from "http";
 
-import * as http from "http"
+// サーバーが通信を待つポート
+const port = 8000;
 
-const port = 5000 // ポート番号
-
-// httpサーバーを設定する
+// httpサーバーを作成する
 const server = http.createServer(
-    (request, response) => {
-        // サーバーにリクエストがあった時に実行される関数
-        response.end("Hello! Node.js with TypeScript")
+    (_, response) => {
+        // 応答する関数
+        response.setHeader("Content-Type", "text/plain; charset=utf8");
+        response.end("こんにちは！");
     }
-)
-// サーバーを起動してリクエストを待ち受け状態にする
-server.listen(port)
+);
 
-// ログを出力する
-console.log(`http://localhost:${port} へアクセスください`)
+// サーバーを起動してリクエストを待ち受け状態にする
+server.listen(port);
+
+// コンソールにメッセージを表示する
+console.log(`http://localhost:${port}`);
