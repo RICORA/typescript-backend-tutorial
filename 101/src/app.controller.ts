@@ -9,4 +9,10 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  // "time"というパスを持つリクエストに返事をする関数（ハンドラ）
+  @Get("time")
+  getTime(): string {
+    return this.appService.getTime();
+  }
 }
