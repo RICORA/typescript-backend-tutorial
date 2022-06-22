@@ -16,6 +16,15 @@ npm i -g @nestjs/cli
 
 ```
 nest new プロジェクト名
+```
+
+```
+? Which package manager would you ❤️  to use?
+```
+
+と聞かれたら、 `npm` を選択して、**ENTER**。
+
+```
 cd プロジェクト名
 ```
 
