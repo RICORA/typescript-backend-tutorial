@@ -18,6 +18,14 @@ npm i -g @nestjs/cli
 nest new プロジェクト名
 ```
 
+gitリポジトリを作らない場合は、`-g` オプションを付けて、
+
+```
+nest new -g プロジェクト名
+```
+
+とする。
+
 ```
 ? Which package manager would you ❤️  to use?
 ```
